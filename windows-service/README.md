@@ -46,17 +46,17 @@ We are done creating the application.   Close the Application.sln as we will be 
 
 ### Project Structure Overview:
 
-![Mode](/Images/desktop-application/Installer-ProjectStructure.png)
+![Mode](/Images/windows-service/Installer-Sln.png)
 
 ### The IsWiX solution template created a solution with two projects based on the name:
 
 * Setup Project 
-   * Named DesktopApplication
+   * Named WindowsService
    * Creates an .MSI (Microsoft Installer) database that is installable by a user.
    * Expresses the Manufacturer, Product Name, Upgrade story, Feature Tree,  User Interface,  Installation Requirements and Installation path of the product.
 
 * Merge Module Project
-   * NamedDesktopApplicationMM  (Merge Module)
+   * WindowsServiceMM  (Merge Module)
    * Creates an .MSM (Micrsoft Merge Module) database that is not installable by a user.
    * Similar to a .LIB in C/C++.  Database contents get merged into the .MSI at build time.
    * Expresses the files, subfolders, registry entries, shortcuts, services, environment variables and so on that will make up your product.
@@ -64,21 +64,21 @@ We are done creating the application.   Close the Application.sln as we will be 
    
 ### Author the merge module:
 
-![Merge Module Source before](/Images/desktop-application/Installer-MergeModuleBefore.png)
+![Merge Module Source before](/Images/windows-service/Installer-MergeModuleBefore.png)
 
-Select the DesktopApplicationMM.wxs (.wix source) in the DesktopApplication MM project.
+Select the WindowsServiceMM.wxs (.wix source) in the WindowsServiceMM project.
 
 Observe line 5: `<?define SourceDir="..\Deploy"?>` This will guide IsWiX in knowing where to find your applications files relative to the location of this wix project (.wixproj).  Our project structure choices cause this to automatically align with the output of our previous xcopy command.
 
 ### Launch IsWiX:
 
-![Launch IsWiX](/Images/desktop-application/Installer-LaunchIsWiX.png)
+![Launch IsWiX](/Images/windows-service/Installer-LaunchIsWiX.png)
 
 Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 
 ![IsWiX Launched](/Images/desktop-application/Installer-IsWiX.png)
 
-* Our DesktopApplicationMM.wxs document is now loaded in IsWiX.  
+* Our WindowsServiceMM.wxs document is now loaded in IsWiX.  
 * We are given a single document interface (SDI) with multiple designers along the left side. 
 * Each designer expresses a particular view of our .wxs file.  
 * The default designer is the General Information designer.  
@@ -88,7 +88,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 
 ### Click on the Files and Folders designer:
 
-![IsWiX Files and Folder designer - before](/Images/desktop-application/Installer-IsWiXFFBefore.png)
+![IsWiX Files and Folder designer - before](/Images/windows-service/Installer-IsWiXFFBefore.png)
 
 * The top  two quadrants of this designer represent source files and folders that are on your developer machine  that can be included in the installation.  
 * The bottom two quadrants represent what will be installed on the destination machine.  
@@ -100,17 +100,17 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    
 ### Author your files:
 
-![IsWiX Files and Folder designer - after](/Images/desktop-application/Installer-IsWiXFFAfter.png)
+![IsWiX Files and Folder designer - after](/Images/windows-service/Installer-IsWiXFFAfter.png)
 
 * Click on the `[MergeRedirectFolder]` in the destination view.
-* Drag the file DesktopApplication.exe from the source files to the destination files quadrant.
+* Drag the file WindowsService.exe from the source files to the destination files quadrant.
    * We don't need to ship the other files.
    
-### Author your Shortcut:
+### Author your Service:
 
-![IsWiX ShortCuts designer](/Images/desktop-application/Installer-IsWiXShortCuts.png)
+![IsWiX Services designer](/Images/windows-service-application/Installer-IsWiXServiceBfore.png)
 
-* Click on the ShortCuts designer. A view of your merge modules shortcuts will appear.
+* Click on the ShortCuts designer. A view of your services will appear.
 
 ![IsWiX ShortCuts designer - create desktop folder](/Images/desktop-application/Installer-IsWiXShortCutsDesktopFolder.png)
 
