@@ -4,7 +4,7 @@ These tutorials will walk you through how to build [Windows Installer](https://m
 
 # Prerequisites
 
-## This tutorial requires you to download and install:
+## These tutorials require you to download and install:
 
 * Microsoft Visual Studio
    * 2010 or higher. (2015 or 2017 highly reccomended.)
