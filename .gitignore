@@ -145,13 +145,6 @@ DocProject/Help/html
 # Click-Once directory
 publish/
 
-# Publish Web Output
-*.[Pp]ublish.xml
-*.azurePubxml
-# TODO: Comment the next line if you want to checkin your web deploy settings
-# but database connection strings (with potential passwords) will be unencrypted
-*.pubxml
-*.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
@@ -287,4 +280,6 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-/Installer/Deploy
+/desktop-application/Installer/Deploy
+/web-application/Installer/Deploy
+/windows-service/Installer/Deploy
