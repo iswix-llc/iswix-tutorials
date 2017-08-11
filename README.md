@@ -2,9 +2,9 @@
 
 These tutorials will walk you through how to build [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup packages using the [WiX Toolset](http://wixtoolset.org/) (aka Windows Installer XML aka WiX) and [Industrial Strength Windows Installer XML](http://iswix.com/projects/) (aka IsWiX) for a variety of application types.
 
-# Prerequisites
+## Prerequisites
 
-## These tutorials require you to download and install:
+### These tutorials require you to download and install:
 
 * Microsoft Visual Studio
    * 2010 or higher. (2015 or 2017 highly reccomended.)
@@ -27,8 +27,8 @@ IsWiX is an open source project started by Windows Installer / InstallShield / W
 
 ## Tutorials
 
-[Desktop Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/desktop-application)
+[Desktop Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/desktop-application) A simple WPF application with a shortcut on the desktop.
 
-[Web Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/web-application)
+[Web Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/web-application) A basic ASP.NET website installed on IIS.
 
-[Windows Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/windows-service)
+[Windows Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/windows-service) A basic Windows Service that installs and starts without using InstallUtil.
