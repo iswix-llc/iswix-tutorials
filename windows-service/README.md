@@ -48,7 +48,7 @@ We are done creating the application.   Close the Application.sln as we will be 
 
 ### Project Structure Overview:
 
-![Mode](/Images/windows-service/Installer-Sln.png)
+![Mode](/Images/windows-service/Installer-Solution.png)
 
 ### The IsWiX solution template created a solution with two projects based on the name:
 
@@ -110,11 +110,11 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    
 ### Author your Service:
 
-![IsWiX Services designer](/Images/windows-service/Installer-IsWiXServiceBfore.png)
+![IsWiX Services designer](/Images/windows-service/Installer-IsWiXServiceBefore.png)
 
-* Click on the ShortCuts designer. A view of your services will appear.
+* Click on the Services designer. A view of your services will appear.
 
-![IsWiX Services designer - create desktop folder](/Images/windows-serivce/Installer-IsWiXServiceAddNew.png)
+![IsWiX Services designer - create desktop folder](/Images/windows-service/Installer-IsWiXServiceAddNew.png)
 
 * Right click `Destination Computer` and select the `Create New Service` option.
 
