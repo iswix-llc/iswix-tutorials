@@ -1,6 +1,6 @@
 # IsWiX Desktop Application Tutorial
 
-This tutorial will walk you through how to build a [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup package for a typical Windows desktop application.  It is assumed you have read the [Overview](/) instructions first.
+This tutorial will walk you through how to build a [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup package for a typical Windows desktop application.  It is assumed you have read the [Overview](https://github.com/iswix-llc/iswix-tutorials) instructions first.
 
 # Create the Desktop Application
 
