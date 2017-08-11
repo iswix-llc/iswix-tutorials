@@ -28,3 +28,5 @@ IsWiX is an open source project started by Windows Installer / InstallShield / W
 ## Tutorials
 
 [Desktop Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/desktop-application)
+
+[Web Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/web-application)
