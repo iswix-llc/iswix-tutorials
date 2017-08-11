@@ -25,24 +25,6 @@ WiX is an open source project started by former Microsoft employee Rob Mensching
 
 IsWiX is an open source project started by Windows Installer / InstallShield / WiX expert [Christopher Painter](http://iswix.com/) while he was working at Textron - Overwatch Systems division in [2010](http://blog.deploymentengineering.com/2010/05/introducing-iswix.html).  The project was initially funded by Textron OWS as part of a business process transformation effort. Although Textron OWS always wanted to publish the project as open source, the sensitive nature of our business made that difficult. After a very successful pilot, the IP rights were reassigned to Christopher Painter so that he could share it with the world.  InstallShield was overall a good product but Textron OWS had strained it way beyond what InstallShield was ever designed to do.  InstallShield's binary or DTD base XML project files were not branch/merge friendly and the licensing model did not encourage agile/lean workflows. WiX could solve these problems except that Textron OWS's team of 12 build and release engineers would have had to train 250+ developers how to develop in it.  IsWiX was born to give developers an InstallShield like experience for the core installer changes they would need to make.  Basically think 'minimum viable product'.  All other changes would be done by MSI experts in WiX by hand.  Later the product was expanded to include Visual Studio template to simplify the development of  desktop applications, windows services and web application.  The tutorial you are reading today is how to handle the desktop application scenario.
 
-# Create a source repository
+## Tutorials
 
-While it assumed that you will want to check this code into some sort of source code repository, it is out of the scope of this tutorial to advise you how to do that since we don't know which tool you'll want to use.  We will give a few pointers for GitHub and Team Foundation Server since they are commonly used.  When creating a repos in GitHub, pick the Visual Studio .gitignore file.  This will prevent build artifacts from getting included in your commits.  Add one additional rule to this .gitignore to account for IsWiX specific behavior:
-
-`Installer\Deploy`
-
-Nothing special is needed to be done when using Microsoft Team Foundation Version Control (TFVC) as it already has good integration with Visual Studio and is deeply aware of what your project files are.
-   
-## Build considerations
-
-Now that you have a source tree of application and installer code you will likely want to build it with a continuous integration system. WiX suports msbuild and as such is easily compiled.  While IsWiX merely authors the WiX projects and isn't technically part of the build process (and not needed on the build server)  it does include some XML tags in the DesktopApplication.wixproj that can be useful for versioning.
-
-`<MSIProductVersion Condition="'$(MSIProductVersion)' == ''">$([System.Text.RegularExpressions.Regex]::Match($(TF_BUILD_BUILDNUMBER), "\d+.\d+.\d+.\d+"))</MSIProductVersion>`
-
-This allows you to pass an MSIProductVersion property into the build or directly infer it in the case of a TFS XAML build definition. For TFS v.Next builds change `TF_BUILD_BUILDNUMBER` to `BUILD_BUILDNUMBER`.   As Windows Installer ignores the fourth field, you should always change one of the first three fields in order to ensure Major Upgrades will work correctly.  
-
-`1.0.0.0, 1.0.1.0, 1.0.2.0, 1.1.0.0, 1.1.1.0, 2.0.0.0, 2.0.1.0` and so on...
-
-## Conclusion
-
-Hopefully these tutorials give you a complete picture of how to quickly come up to speed on creating an MSI installer using WiX / IsWiX. This is only the beginning though as eventually you'll need to learn more about the underlying technologies as you attempt more complicated authoring.
+[Desktop Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/desktop-application)
