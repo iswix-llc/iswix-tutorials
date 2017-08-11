@@ -108,28 +108,24 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    
 ### Author your Service:
 
-![IsWiX Services designer](/Images/windows-service-application/Installer-IsWiXServiceBfore.png)
+![IsWiX Services designer](/Images/windows-service/Installer-IsWiXServiceBfore.png)
 
 * Click on the ShortCuts designer. A view of your services will appear.
 
-![IsWiX ShortCuts designer - create desktop folder](/Images/desktop-application/Installer-IsWiXShortCutsDesktopFolder.png)
+![IsWiX Services designer - create desktop folder](/Images/windows-serivce/Installer-IsWiXServiceAddNew.png)
 
-* Right click `Destination Computer` and select the `DesktopFolder` option.
-* Expand `Desitnation Computer` and select the `DesktopFolder` node.  (Maybe a Pull Request will fix this some day.)
+* Right click `Destination Computer` and select the `Create New Service` option.
 
-![IsWiX ShortCuts designer - create shortcut](/Images/desktop-application/Installer-IsWiXShortCutsCreateShortCut.png)
+![IsWiX Servicess designer - component picker](/Images/windows-service/Installer-IsWiXServicePickComponent.png)
 
-* Right click `DesktopFolder` and select the `Create ShortCut option`.
+* Select the file that will serve as the target of this shortcut. `[MergeRedirectFolder\WindowsService.exe`  and click Select.
 
-![IsWiX ShortCuts designer - component picker](/Images/desktop-application/Installer-IsWiXShortCutsComponentPicker.png)
+![IsWiX Servicess designer - properties](/Images/windows-service/Installer-IsWiXServiceProperties.png)
 
-* Select the file that will serve as the target of this shortcut. `[MergeRedirectFolder\DesktopApplication.exe`  and click Select.
-
-![IsWiX ShortCuts designer - shortcut properties](/Images/desktop-application/Installer-IsWiXShortCutsProperties.png)
-
-* Use the property grid to give the shortcut a friendly name such as `Desktop Application`.
-
-![Visual Studio Reload Document](/Images/desktop-application/Installer-VSReload.png)
+* Use the property grid to give the service a name and description.  
+  * It is also possible to associate the service to a user account.  This is advanced authoring that is not covered by this tutorial.
+  
+![Visual Studio Reload Document](/Images/windows-service/Installer-ReloadVS.png)
 
 * Press Control-S to save the changes back to disk and close the IsWiX application.
 * This should cause Visual Studio to detect that the .wxs file was modified out of process.  Click Yes to cause it to reload in the IDE.
@@ -140,17 +136,17 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 
 * If you compare the XML before/after you should notice that IsWiX authored multiple elements for you. 
    * A `Directory` element referencing the DesktopFolder location.
-   * `Component`, `File`, and `Shortcut` elements defining your new file and a shortcut pointing to it. 
+   * `Component`, `File`, `ServiceInstall` and `Servicecontrol` elements defining your new file and a service for it. 
    * IsWiX manages this document using a hashing and sorting alogorythm.  You should not modify these elements.
    * You may however add additional child elements and/or author elements in the `-custom.wxs` fragment.  This is an advanced topic that may be covered by another tutorial one day.
    
 ### Build the MSI
 
-![Installer - Built MSI](/Images/desktop-application/Installer-BuiltMSI.png)
+![Installer - Built MSI](/Images/windows-service/Installer-BuiltMSI.png)
 
 ### Different .NET Version Scenario
 
-![Installer - Built MSI](/Images/desktop-application/Installer-DotNetVersion.png)
+![Installer - Built MSI](/Images/windows-service/Installer-DotNetVersions.png)
 
 * The IsWiX project template includes a .NET 4.0 prerequisite check by default.  This ensures that .NET 4.0 is installed  before a user can install your MSI.
 * You may have choosen a different .NET version when building your EXE.  In this case find the Product.wxs file in the DesktopApplication wix project.
