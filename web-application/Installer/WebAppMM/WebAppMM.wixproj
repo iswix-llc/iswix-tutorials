@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.7</ProductVersion>
-    <ProjectGuid>{9d674ca4-e0d9-44d2-b5a9-6775276ad4c7}</ProjectGuid>
+    <ProjectGuid>{de378512-210c-45e4-a9ac-c0eb80954677}</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>WebAppMM</OutputName>
     <OutputType>Module</OutputType>

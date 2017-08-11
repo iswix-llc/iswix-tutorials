@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.7</ProductVersion>
-    <ProjectGuid>{5ff8b22d-e038-4454-97aa-f7388047b253}</ProjectGuid>
+    <ProjectGuid>{bbb63d91-190f-4d94-bd3a-cc16a85ce23c}</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>WebApp</OutputName>
     <OutputType>Package</OutputType>
@@ -63,7 +63,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WebAppMM\WebAppMM.wixproj">
       <Name>WebAppMM</Name>
-      <Project>{9d674ca4-e0d9-44d2-b5a9-6775276ad4c7}</Project>
+      <Project>{de378512-210c-45e4-a9ac-c0eb80954677}</Project>
       <Private>True</Private>
       <DoNotHarvest>True</DoNotHarvest>
       <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>

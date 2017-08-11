@@ -17,7 +17,7 @@
     
     <DirectoryRef Id="INSTALLLOCATION">
       <Directory Id="webSite" Name="WebSite">
-        <Component Id="webSite" Guid="45c75455-ce65-4b3f-9157-d8e2d0a1eb95" KeyPath="yes">
+        <Component Id="webSite" Guid="32165cee-fa0f-46a5-9345-c0f9a68e8f72" KeyPath="yes">
           <iis:WebAppPool Id="webSite" Name="WebApp" Identity="applicationPoolIdentity" ManagedRuntimeVersion="v4.0" ManagedPipelineMode="Integrated"/>
           <iis:WebSite Id="webSite" SiteId="*" Description="WebApp Web Site" Directory="webSite" ConfigureIfExists="no">
             <iis:WebAddress Id="webSite" Port="8080" />
