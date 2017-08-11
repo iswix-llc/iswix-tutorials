@@ -1,13 +1,13 @@
 # IsWiX Tutorials Overview
 
-These tutorials will walk you through how to builds [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup packages using the [WiX Toolset](http://wixtoolset.org/) (aka Windows Installer XML aka WiX) and [Industrial Strength Windows Installer XML](http://iswix.com/projects/) (aka IsWiX) for a variety of application types.
+These tutorials will walk you through how to build [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup packages using the [WiX Toolset](http://wixtoolset.org/) (aka Windows Installer XML aka WiX) and [Industrial Strength Windows Installer XML](http://iswix.com/projects/) (aka IsWiX) for a variety of application types.
 
 # Prerequisites
 
 ## This tutorial requires you to download and install:
 
 * Microsoft Visual Studio
-   * 2010 or newer. (2015 or 2017 highly reccomended.)
+   * 2010 or higher. (2015 or 2017 highly reccomended.)
    * [Community Edition](https://www.visualstudio.com/vs/community/) or higher. 
    * Express Edition will not work.
 * Windows Installer XML [3.11](http://wixtoolset.org/releases/)  or higher. 
