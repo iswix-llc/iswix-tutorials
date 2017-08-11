@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define ComponentRules="OneToOne"?>
+  <!-- SourceDir instructs IsWiX the location of the directory that contains files for this merge module -->
+  <?define SourceDir="..\Deploy"?>
+  <Module Id="WebAppMM" Language="1033" Version="1.0.0.0">
+    <Package Id="f94993d6-2272-4ecd-8e02-b1c9252f6214" Manufacturer="WebAppMM" InstallerVersion="200" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="MergeRedirectFolder">
+        <Directory Id="owd7EC1B11923C34664BC418072E67046F6" Name="WebSite">
+          <Component Id="owc17F0ED4422E9CB4943EB47850B1E187C" Guid="88f71269-d94f-aae6-a588-a33b8a989edd">
+            <File Id="owf17F0ED4422E9CB4943EB47850B1E187C" Source="$(var.SourceDir)\WebSite\Web.config" KeyPath="yes" />
+          </Component>
+          <Directory Id="owdB32559087C7B190032A3F036BB617D42" Name="bin">
+            <Component Id="owcA05C7B46E2AC9614AAD046570901EADE" Guid="1c5a8803-dff1-89a6-4d29-417d3617fe08">
+              <File Id="owfA05C7B46E2AC9614AAD046570901EADE" Source="$(var.SourceDir)\WebSite\bin\WebApp.dll" KeyPath="yes" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <ComponentGroupRef Id="Custom" />
+  </Module>
+</Wix>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyFolder" Name="My Company">
+          <Directory Id="INSTALLLOCATION" Name="WindowsService">
+            <Merge Id="WindowsServiceMM" SourceFile="$(var.WindowsServiceMM.TargetPath)" DiskId="1" Language="1033"/>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="WindowsService" Title="WindowsService" Description="Installs all the files needed for WindowsService" Level="1" AllowAdvertise="no" ConfigurableDirectory="INSTALLLOCATION">
+      <MergeRef Id="WindowsServiceMM"/>
+      <!-- Uncomment the below line to pull in IIS Metadata.  Otherwise delete if not needed -->
+      <!--<ComponentGroupRef Id="webSite" />-->
+    </Feature>
+  </Fragment>
+</Wix>
