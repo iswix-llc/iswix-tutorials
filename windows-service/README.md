@@ -41,6 +41,7 @@ We are done creating the application.   Close the Application.sln as we will be 
 * Call the project DesktopApplication.  (This will result in your installer being called DesktopApplication.msi.)
 * Point the Location to the root of your GitHub repos or to a location in your version control system.
    * For tools like Team Foundation Version Control you may want to point it to something like `C:\workspace\TeamProject\ApplicationName\main\` as this will give you the folder `main` that can the be branched to say `dev` and used by build definitions.   This isn't needed in GitHub since the branching model is implemented differently.
+* Call the solution `Application`
 * Make sure the "Create directory for solution" option is selected.
 * Make sure the "Add Files to Source Control" option is selected if using TFVC.
 
