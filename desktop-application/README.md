@@ -6,7 +6,7 @@ This tutorial will walk you through how to build a [Windows Installer](https://m
 
 ## Launch Visual Studio and create a new WPF application:
 
-![Application New Project](/Images/WPF-NewProject.png)
+![Application New Project](/Images/desktop-application/WPF-NewProject.png)
 
 * Use File | New | Project and select the WPF C# template.
 * Target .NET Framework 4. You can select a different version but you will have an additional step later in the process.
@@ -18,7 +18,7 @@ This tutorial will walk you through how to build a [Windows Installer](https://m
 
 ## Author a postbuild copy:
 
-![Mode](/Images/WPF-PostbuildCopy.png)
+![Mode](/Images/desktop-application/WPF-PostbuildCopy.png)
 
 Using the Solution Explorer, bring up the project properties for your main EXE project.  Author the following postbuild event:
 
@@ -26,7 +26,7 @@ Using the Solution Explorer, bring up the project properties for your main EXE p
 
 This will help us create a directory structure that models what your deployed application should look like.  Go ahead and build the project and take a look at that directory in your workspace.
 
-![Mode](/Images/WPF-InstallerModel.png)
+![Mode](/Images/desktop-application/WPF-InstallerModel.png)
 
 We are done creating the application.   Close the Application.sln as we will be creating a new solution for the installer.
 
@@ -34,7 +34,7 @@ We are done creating the application.   Close the Application.sln as we will be 
 
 ## Launch Visual Studio and create a new IsWiX Solution:
 
-![Installer New Project](/Images/Installer-NewProject.png)
+![Installer New Project](/Images/desktop-application/Installer-NewProject.png)
 
 * Use File | New | Project and select the IsWiX Solution for WiX v3 template.
 * The .NET Framework version isn't important here.  Perhaps one day someone will submit a pull request to help automate a step down the road based on the selection here.
@@ -46,7 +46,7 @@ We are done creating the application.   Close the Application.sln as we will be 
 
 ## Project Structure Overview:
 
-![Mode](/Images/Installer-ProjectStructure.png)
+![Mode](/Images/desktop-application/Installer-ProjectStructure.png)
 
 ## The IsWiX solution template created a solution with two projects based on the name:
 
@@ -64,7 +64,7 @@ We are done creating the application.   Close the Application.sln as we will be 
    
 ## Author the merge module:
 
-![Merge Module Source before](/Images/Installer-MergeModuleBefore.png)
+![Merge Module Source before](/Images/desktop-application/Installer-MergeModuleBefore.png)
 
 Select the DesktopApplicationMM.wxs (.wix source) in the DesktopApplication MM project.
 
@@ -72,11 +72,11 @@ Observe line 5: `<?define SourceDir="..\Deploy"?>` This will guide IsWiX in know
 
 ## Launch IsWiX:
 
-![Launch IsWiX](/Images/Installer-LaunchIsWiX.png)
+![Launch IsWiX](/Images/desktop-application/Installer-LaunchIsWiX.png)
 
 Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 
-![IsWiX Launched](/Images/Installer-IsWiX.png)
+![IsWiX Launched](/Images/desktop-application/Installer-IsWiX.png)
 
 * Our DesktopApplicationMM.wxs document is now loaded in IsWiX.  
 * We are given a single document interface (SDI) with multiple designers along the left side. 
@@ -88,7 +88,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 
 ## Click on the Files and Folders designer:
 
-![IsWiX Files and Folder designer - before](/Images/Installer-IsWiXFFBefore.png)
+![IsWiX Files and Folder designer - before](/Images/desktop-application/Installer-IsWiXFFBefore.png)
 
 * The top  two quadrants of this designer represent source files and folders that are on your developer machine  that can be included in the installation.  
 * The bottom two quadrants represent what will be installed on the destination machine.  
@@ -100,7 +100,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    
 ## Author your files:
 
-![IsWiX Files and Folder designer - after](/Images/Installer-IsWiXFFAfter.png)
+![IsWiX Files and Folder designer - after](/Images/desktop-application/Installer-IsWiXFFAfter.png)
 
 * Click on the `[MergeRedirectFolder]` in the destination view.
 * Drag the file DesktopApplication.exe from the source files to the destination files quadrant.
@@ -108,35 +108,35 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    
 ## Author your Shortcut:
 
-![IsWiX ShortCuts designer](/Images/Installer-IsWiXShortCuts.png)
+![IsWiX ShortCuts designer](/Images/desktop-application/Installer-IsWiXShortCuts.png)
 
 * Click on the ShortCuts designer. A view of your merge modules shortcuts will appear.
 
-![IsWiX ShortCuts designer - create desktop folder](/Images/Installer-IsWiXShortCutsDesktopFolder.png)
+![IsWiX ShortCuts designer - create desktop folder](/Images/desktop-application/Installer-IsWiXShortCutsDesktopFolder.png)
 
 * Right click `Destination Computer` and select the `DesktopFolder` option.
 * Expand `Desitnation Computer` and select the `DesktopFolder` node.  (Maybe a Pull Request will fix this some day.)
 
-![IsWiX ShortCuts designer - create shortcut](/Images/Installer-IsWiXShortCutsCreateShortCut.png)
+![IsWiX ShortCuts designer - create shortcut](/Images/desktop-application/Installer-IsWiXShortCutsCreateShortCut.png)
 
 * Right click `DesktopFolder` and select the `Create ShortCut option`.
 
-![IsWiX ShortCuts designer - component picker](/Images/Installer-IsWiXShortCutsComponentPicker.png)
+![IsWiX ShortCuts designer - component picker](/Images/desktop-application/Installer-IsWiXShortCutsComponentPicker.png)
 
 * Select the file that will serve as the target of this shortcut. `[MergeRedirectFolder\DesktopApplication.exe`  and click Select.
 
-![IsWiX ShortCuts designer - shortcut properties](/Images/Installer-IsWiXShortCutsProperties.png)
+![IsWiX ShortCuts designer - shortcut properties](/Images/desktop-application/Installer-IsWiXShortCutsProperties.png)
 
 * Use the property grid to give the shortcut a friendly name such as `Desktop Application`.
 
-![Visual Studio Reload Document](/Images/Installer-VSReload.png)
+![Visual Studio Reload Document](/Images/desktop-application/Installer-VSReload.png)
 
 * Press Control-S to save the changes back to disk and close the IsWiX application.
 * This should cause Visual Studio to detect that the .wxs file was modified out of process.  Click Yes to cause it to reload in the IDE.
 
 ## Observe the XML changes
 
-![IsWiX Merge Module - After](/Images/Installer-MergeModuleAfter.png)
+![IsWiX Merge Module - After](/Images/desktop-application/Installer-MergeModuleAfter.png)
 
 * If you compare the XML before/after you should notice that IsWiX authored multiple elements for you. 
    * A `Directory` element referencing the DesktopFolder location.
@@ -146,11 +146,11 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    
 ## Build the MSI
 
-![Installer - Built MSI](/Images/Installer-BuiltMSI.png)
+![Installer - Built MSI](/Images/desktop-application/Installer-BuiltMSI.png)
 
 ## Different .NET Version Scenario
 
-![Installer - Built MSI](/Images/Installer-DotNetVersion.png)
+![Installer - Built MSI](/Images/desktop-application/Installer-DotNetVersion.png)
 
 * The IsWiX project template includes a .NET 4.0 prerequisite check by default.  This ensures that .NET 4.0 is installed  before a user can install your MSI.
 * You may have choosen a different .NET version when building your EXE.  In this case find the Product.wxs file in the DesktopApplication wix project.
