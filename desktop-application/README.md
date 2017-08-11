@@ -2,9 +2,9 @@
 
 This tutorial will walk you through how to build a [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup package for a typical Windows desktop application.  It is assumed you have read the [Overview](https://github.com/iswix-llc/iswix-tutorials) instructions first.
 
-# Create the Desktop Application
+## Create the Desktop Application
 
-## Launch Visual Studio and create a new WPF application:
+### Launch Visual Studio and create a new WPF application:
 
 ![Application New Project](/Images/desktop-application/WPF-NewProject.png)
 
@@ -16,7 +16,7 @@ This tutorial will walk you through how to build a [Windows Installer](https://m
 * Make sure the "Create directory for solution" option is selected.
 * Make sure the "Add Files to Source Control" option is selected if using TFVC.
 
-## Author a postbuild copy:
+### Author a postbuild copy:
 
 ![Mode](/Images/desktop-application/WPF-PostbuildCopy.png)
 
@@ -30,9 +30,9 @@ This will help us create a directory structure that models what your deployed ap
 
 We are done creating the application.   Close the Application.sln as we will be creating a new solution for the installer.
 
-# Create the Installer
+## Create the Installer
 
-## Launch Visual Studio and create a new IsWiX Solution:
+### Launch Visual Studio and create a new IsWiX Solution:
 
 ![Installer New Project](/Images/desktop-application/Installer-NewProject.png)
 
@@ -44,11 +44,11 @@ We are done creating the application.   Close the Application.sln as we will be 
 * Make sure the "Create directory for solution" option is selected.
 * Make sure the "Add Files to Source Control" option is selected if using TFVC.
 
-## Project Structure Overview:
+### Project Structure Overview:
 
 ![Mode](/Images/desktop-application/Installer-ProjectStructure.png)
 
-## The IsWiX solution template created a solution with two projects based on the name:
+### The IsWiX solution template created a solution with two projects based on the name:
 
 * Setup Project 
    * Named DesktopApplication
@@ -62,7 +62,7 @@ We are done creating the application.   Close the Application.sln as we will be 
    * Expresses the files, subfolders, registry entries, shortcuts, services, environment variables and so on that will make up your product.
    * Somewhat serves as an atomic abstract encapsulation of a portion of your installer logic.  You may have more then one merge module consumed by one or more features across one consumed by one or more setup projects.  This is an advanced topic that may be covered by another tutorial some day.  For now just keep it simple with a 1 product with 1 feature consuming 1 merge module.
    
-## Author the merge module:
+### Author the merge module:
 
 ![Merge Module Source before](/Images/desktop-application/Installer-MergeModuleBefore.png)
 
@@ -70,7 +70,7 @@ Select the DesktopApplicationMM.wxs (.wix source) in the DesktopApplication MM p
 
 Observe line 5: `<?define SourceDir="..\Deploy"?>` This will guide IsWiX in knowing where to find your applications files relative to the location of this wix project (.wixproj).  Our project structure choices cause this to automatically align with the output of our previous xcopy command.
 
-## Launch IsWiX:
+### Launch IsWiX:
 
 ![Launch IsWiX](/Images/desktop-application/Installer-LaunchIsWiX.png)
 
@@ -86,7 +86,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    * Every merge module has a unique identity similar to a strong name in .NET.  
    * Merge modules can also have dependencies on other merge modules.  This may be covered in another tutorial one day.
 
-## Click on the Files and Folders designer:
+### Click on the Files and Folders designer:
 
 ![IsWiX Files and Folder designer - before](/Images/desktop-application/Installer-IsWiXFFBefore.png)
 
@@ -98,7 +98,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    * The use of relative path filenames will be critical when we get to build automation as all of your file path dependencies must be found on the build server for your solution to successfully build.
    * Our choice of Application.sln and Installer.sln is important also as we avoid tricky project dependency / build order race conditions.
    
-## Author your files:
+### Author your files:
 
 ![IsWiX Files and Folder designer - after](/Images/desktop-application/Installer-IsWiXFFAfter.png)
 
@@ -106,7 +106,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 * Drag the file DesktopApplication.exe from the source files to the destination files quadrant.
    * We don't need to ship the other files.
    
-## Author your Shortcut:
+### Author your Shortcut:
 
 ![IsWiX ShortCuts designer](/Images/desktop-application/Installer-IsWiXShortCuts.png)
 
@@ -134,7 +134,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 * Press Control-S to save the changes back to disk and close the IsWiX application.
 * This should cause Visual Studio to detect that the .wxs file was modified out of process.  Click Yes to cause it to reload in the IDE.
 
-## Observe the XML changes
+### Observe the XML changes
 
 ![IsWiX Merge Module - After](/Images/desktop-application/Installer-MergeModuleAfter.png)
 
@@ -144,11 +144,11 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    * IsWiX manages this document using a hashing and sorting alogorythm.  You should not modify these elements.
    * You may however add additional child elements and/or author elements in the `-custom.wxs` fragment.  This is an advanced topic that may be covered by another tutorial one day.
    
-## Build the MSI
+### Build the MSI
 
 ![Installer - Built MSI](/Images/desktop-application/Installer-BuiltMSI.png)
 
-## Different .NET Version Scenario
+### Different .NET Version Scenario
 
 ![Installer - Built MSI](/Images/desktop-application/Installer-DotNetVersion.png)
 
@@ -158,7 +158,7 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
    * Update the `ProperfyRef` on line 20 and update the condition on line 21.
    * The `Installed or` portion of the condition is to ensure tha we don't require .NET during the uninstall as this would be a poor user experience.
    
-## Build considerations
+### Build considerations
 
 Now that you have a source tree of application and installer code you will likely want to build it with a continuous integration system. WiX suports msbuild and as such is easily compiled.  While IsWiX merely authors the WiX projects and isn't technically part of the build process (and not needed on the build server)  it does include some XML tags in the DesktopApplication.wixproj that can be useful for versioning.
 
@@ -168,6 +168,6 @@ This allows you to pass an MSIProductVersion property into the build or directly
 
 `1.0.0.0, 1.0.1.0, 1.0.2.0, 1.1.0.0, 1.1.1.0, 2.0.0.0, 2.0.1.0` and so on...
 
-## Conclusion
+### Conclusion
 
 Hopefully this tutorial gives you a complete picture of how to quickly come up to speed on creating an MSI installer using WiX / IsWiX. This is only the beginning though as eventually you'll need to learn more about the underlying technologies as you attempt more complicated authoring.
