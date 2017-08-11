@@ -114,27 +114,31 @@ Select Tools | Launch IsWiX to send the current .wxs document to IsWiX.
 
 * Click on the Services designer. A view of your services will appear.
 
+
 ![IsWiX Services designer - create desktop folder](/Images/windows-service/Installer-IsWiXServiceAddNew.png)
 
 * Right click `Destination Computer` and select the `Create New Service` option.
+
 
 ![IsWiX Servicess designer - component picker](/Images/windows-service/Installer-IsWiXServicePickComponent.png)
 
 * Select the file that will serve as the target of this shortcut. `[MergeRedirectFolder\WindowsService.exe`  and click Select.
 
+
 ![IsWiX Servicess designer - properties](/Images/windows-service/Installer-IsWiXServiceProperties.png)
 
 * Use the property grid to give the service a name and description.  
   * It is also possible to associate the service to a user account.  This is advanced authoring that is not covered by this tutorial.
-  
+* Press Control-S to save the changes back to disk and close the IsWiX application.
+
+
 ![Visual Studio Reload Document](/Images/windows-service/Installer-ReloadVS.png)
 
-* Press Control-S to save the changes back to disk and close the IsWiX application.
 * This should cause Visual Studio to detect that the .wxs file was modified out of process.  Click Yes to cause it to reload in the IDE.
 
 ### Observe the XML changes
 
-![IsWiX Merge Module - After](/Images/desktop-application/Installer-MergeModuleAfter.png)
+![IsWiX Merge Module - After](/Images/windows-service/Installer-MergeModuleAfter.png)
 
 * If you compare the XML before/after you should notice that IsWiX authored multiple elements for you. 
    * A `Directory` element referencing the DesktopFolder location.
