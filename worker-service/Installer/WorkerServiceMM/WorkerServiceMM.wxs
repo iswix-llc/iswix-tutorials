@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define ComponentRules="OneToOne"?>
+  <!-- SourceDir instructs IsWiX the location of the directory that contains files for this merge module -->
+  <?define SourceDir="..\Deploy"?>
+  <Module Id="WorkerServiceMM" Language="1033" Version="1.0.0.0">
+    <Package Id="09b68c9a-fd10-4a74-a156-93f097acc56c" Manufacturer="WorkerServiceMM" InstallerVersion="200" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="MergeRedirectFolder">
+        <Component Id="owc1540152503FCFEC8CE2C4AC6E16B3668" Guid="52c66450-ad67-f01e-14b5-286ab7a19d88">
+          <File Id="owf1540152503FCFEC8CE2C4AC6E16B3668" Source="$(var.SourceDir)\WorkerService.exe" KeyPath="yes" />
+          <ServiceInstall Id="si8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" DisplayName="WorkerService Service" Description="WorkerService Service" ErrorControl="normal" Start="auto" Type="ownProcess" />
+          <ServiceControl Id="sc8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" Start="install" Stop="both" Remove="both" Wait="yes" />
+        </Component>
+      </Directory>
+    </Directory>
+    <ComponentGroupRef Id="Custom" />
+  </Module>
+</Wix>
