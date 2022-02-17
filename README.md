@@ -7,15 +7,15 @@ These tutorials will walk you through how to build [Windows Installer](https://m
 ### These tutorials require you to download and install:
 
 * Microsoft Visual Studio
-   * 2010 or higher. (2015 or 2017 highly reccomended.)
+   * 2019 or higher. (2022 highly reccomended.)
    * [Community Edition](https://www.visualstudio.com/vs/community/) or higher. 
    * Express Edition will not work.
-* Windows Installer XML [3.11](http://wixtoolset.org/releases/)  or higher. 
+* Windows Installer XML [3.11.2](http://wixtoolset.org/releases/)  or higher. 
    * Although IsWiX has project templates for WiX v4, WiX v4 is an alpha status experimental rewrite of WiX and will not work.
 * WiX Toolset Visual Studio Extension
    * Install one [extension](http://wixtoolset.org/releases/) for each version of Visual Studio you wish to use. 
 * IsWiX [4.11](https://github.com/iswix-llc/iswix/releases) or higher.
-   * Will automatically target all of your Visual Studio installations without the need forseperate extension downloads.
+   * Will automatically target all of your Visual Studio installations without the need for seperate extension downloads.
 
 ## Backstory
 
