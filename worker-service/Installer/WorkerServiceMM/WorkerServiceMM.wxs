@@ -1,19 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
   <?define ComponentRules="OneToOne"?>
   <!-- SourceDir instructs IsWiX the location of the directory that contains files for this merge module -->
   <?define SourceDir="..\Deploy"?>
-  <Module Id="WorkerServiceMM" Language="1033" Version="1.0.0.0">
-    <Package Id="09b68c9a-fd10-4a74-a156-93f097acc56c" Manufacturer="WorkerServiceMM" InstallerVersion="200" />
+  <Module Id="WorkerServiceMM" Language="1033" Version="1.0.0.0" Guid="09b68c9a-fd10-4a74-a156-93f097acc56c" InstallerVersion="200">
+    <SummaryInformation Manufacturer="WorkerServiceMM" />
+    <ComponentGroupRef Id="Custom" />
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="MergeRedirectFolder">
+        <Component Id="owcEF0515C9BBBA2A2A71858C390F6C6FFB" Guid="8cc50b6a-0d31-641e-9477-170d3d59cb7a">
+          <File Id="owfEF0515C9BBBA2A2A71858C390F6C6FFB" Source="$(var.SourceDir)\appsettings.json" KeyPath="yes" />
+        </Component>
+        <Component Id="owc7173D934BCC74852A5AADC9254DB0588" Guid="b8ddb5ee-4b96-3196-7bbf-364c132bd741">
+          <File Id="owf7173D934BCC74852A5AADC9254DB0588" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.Abstractions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcDE1AABE3354D79439FE6F1E513F7F4EF" Guid="e5a15c15-5284-733c-3d9e-daaf504eb1c1">
+          <File Id="owfDE1AABE3354D79439FE6F1E513F7F4EF" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.Binder.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc8403F6CF1C880F9E8A046EECE3EEEA51" Guid="60218cf8-41d3-74e2-bb37-c87574bbd458">
+          <File Id="owf8403F6CF1C880F9E8A046EECE3EEEA51" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.CommandLine.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc31F0DE2B9D52961C61E03EE915D26085" Guid="ffe304a8-a5b2-2008-349d-ee7e8ce9dd47">
+          <File Id="owf31F0DE2B9D52961C61E03EE915D26085" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcA23E37A5A4471CCC7D96EE3001A16E62" Guid="e5dcd302-9591-d6af-ed3e-fea1fce58a5f">
+          <File Id="owfA23E37A5A4471CCC7D96EE3001A16E62" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc7B51EC8286BF54AEF82DF7E822156DA0" Guid="297a34cc-e8d0-2c91-19f2-7037c98dfefa">
+          <File Id="owf7B51EC8286BF54AEF82DF7E822156DA0" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.FileExtensions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcB2E3BFB24741518D9AFA5A402F87DA26" Guid="930e14f3-c1a2-f9eb-f1d8-212e74f0754a">
+          <File Id="owfB2E3BFB24741518D9AFA5A402F87DA26" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.Json.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc555F37754A25C4D848E27CDFCF87BDD7" Guid="e51b2827-dbd3-d0c6-2628-86e2010f2156">
+          <File Id="owf555F37754A25C4D848E27CDFCF87BDD7" Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.UserSecrets.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc87C4F72DC119E1A19D0B8EB167F78263" Guid="dfbfe594-bc9c-52dd-28f0-c7c8ebb5778d">
+          <File Id="owf87C4F72DC119E1A19D0B8EB167F78263" Source="$(var.SourceDir)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc16531D2D98003D2C52258B570BEC98F5" Guid="603ee5e6-a5b2-9304-247c-00556c241892">
+          <File Id="owf16531D2D98003D2C52258B570BEC98F5" Source="$(var.SourceDir)\Microsoft.Extensions.DependencyInjection.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcACE53B6A7A26ADB0215CE588ACDE87E6" Guid="c0510795-e71e-de85-1d9e-5942c1927cd0">
+          <File Id="owfACE53B6A7A26ADB0215CE588ACDE87E6" Source="$(var.SourceDir)\Microsoft.Extensions.FileProviders.Abstractions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc02D27D1CCBF6BAB979FEE6E092F054D4" Guid="8c480d1d-083c-0aca-a0a6-94ddf21c6f03">
+          <File Id="owf02D27D1CCBF6BAB979FEE6E092F054D4" Source="$(var.SourceDir)\Microsoft.Extensions.FileProviders.Physical.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc4E3FFE683A16FBA49BB1805A09438F90" Guid="10002449-125b-9887-c763-008258a3de7d">
+          <File Id="owf4E3FFE683A16FBA49BB1805A09438F90" Source="$(var.SourceDir)\Microsoft.Extensions.FileSystemGlobbing.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcA9953D96C2550ECC0F2EC3DC1B68B7B6" Guid="78ece740-4ba6-4c6a-0292-2186895ee66b">
+          <File Id="owfA9953D96C2550ECC0F2EC3DC1B68B7B6" Source="$(var.SourceDir)\Microsoft.Extensions.Hosting.Abstractions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcD95302ED6E07494AE18C157625F43383" Guid="0e9ed56f-9578-1826-ba95-b26b7a2bc79f">
+          <File Id="owfD95302ED6E07494AE18C157625F43383" Source="$(var.SourceDir)\Microsoft.Extensions.Hosting.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcD76E13C4616F5E0804B8C8FD5F6AEE0B" Guid="b322cc75-dad7-9b73-072a-ea2fc60a9560">
+          <File Id="owfD76E13C4616F5E0804B8C8FD5F6AEE0B" Source="$(var.SourceDir)\Microsoft.Extensions.Hosting.WindowsServices.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc7AD04EA5783093F8FABD6AA959067340" Guid="2bed6664-23fc-ca54-364c-dc0ad14014c0">
+          <File Id="owf7AD04EA5783093F8FABD6AA959067340" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Abstractions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc19A4B40710AD7D7C0433117362CE610B" Guid="023e0886-48e7-8d8d-87e7-ef79c2b34455">
+          <File Id="owf19A4B40710AD7D7C0433117362CE610B" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Configuration.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcE6538F26465A36D5A74ECC157567C19A" Guid="a4930d02-df52-de24-719d-3eac1370b6cb">
+          <File Id="owfE6538F26465A36D5A74ECC157567C19A" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Console.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc5F38A916C1DC1DA26D0C87E68330F1CB" Guid="f1ba1979-d962-a165-d09a-ccdb03272a2e">
+          <File Id="owf5F38A916C1DC1DA26D0C87E68330F1CB" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Debug.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc9A85691F0973C21185785885F5526A6C" Guid="db2b8366-8066-5459-f75f-49d51816e55f">
+          <File Id="owf9A85691F0973C21185785885F5526A6C" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcC60C736E62CA3904C55C6A582B557CA5" Guid="63e9d5c6-2b66-e978-1935-44a6d0f82c61">
+          <File Id="owfC60C736E62CA3904C55C6A582B557CA5" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.EventLog.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcD220FA217329E5C3B61C0424A8EEBAA4" Guid="dd7910af-b2e3-1ccc-cf45-15dbcb1f5290">
+          <File Id="owfD220FA217329E5C3B61C0424A8EEBAA4" Source="$(var.SourceDir)\Microsoft.Extensions.Logging.EventSource.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc2009B836D83363F7E8F8175EA2C57427" Guid="6230e2a9-6b4b-70b1-08da-80c049387e84">
+          <File Id="owf2009B836D83363F7E8F8175EA2C57427" Source="$(var.SourceDir)\Microsoft.Extensions.Options.ConfigurationExtensions.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc889F050B853E61CA58DC7E8A75F823A9" Guid="0bd7addd-d49d-6aa2-f013-2019936d498d">
+          <File Id="owf889F050B853E61CA58DC7E8A75F823A9" Source="$(var.SourceDir)\Microsoft.Extensions.Options.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc693206EBEBFE742D9132304AA1126C8F" Guid="588a78fb-6fc9-572f-f98b-8e8d023238c4">
+          <File Id="owf693206EBEBFE742D9132304AA1126C8F" Source="$(var.SourceDir)\Microsoft.Extensions.Primitives.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owcF482E4DCAFAC17238503C8775FE3C422" Guid="e5fde092-5faa-4e06-12e1-7a9a5fe997a6">
+          <File Id="owfF482E4DCAFAC17238503C8775FE3C422" Source="$(var.SourceDir)\System.Diagnostics.EventLog.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc4A1838ED7CC671182334B29E19327C8B" Guid="e85e2712-f9f0-93e2-cacd-2d193c4aada8">
+          <File Id="owf4A1838ED7CC671182334B29E19327C8B" Source="$(var.SourceDir)\System.ServiceProcess.ServiceController.dll" KeyPath="yes" />
+        </Component>
+        <Component Id="owc7290DCD57558DC55F5577FC73F378B25" Guid="c509bf5e-8917-5bea-cbbd-c6e81700b934">
+          <File Id="owf7290DCD57558DC55F5577FC73F378B25" Source="$(var.SourceDir)\WorkerService.deps.json" KeyPath="yes" />
+        </Component>
+        <Component Id="owc77754FA8255028AA1868C9B620062997" Guid="2c2de3c2-d601-68f5-9ded-788c1cf245cb">
+          <File Id="owf77754FA8255028AA1868C9B620062997" Source="$(var.SourceDir)\WorkerService.dll" KeyPath="yes" />
+        </Component>
         <Component Id="owc1540152503FCFEC8CE2C4AC6E16B3668" Guid="52c66450-ad67-f01e-14b5-286ab7a19d88">
           <File Id="owf1540152503FCFEC8CE2C4AC6E16B3668" Source="$(var.SourceDir)\WorkerService.exe" KeyPath="yes" />
           <ServiceInstall Id="si8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" DisplayName="WorkerService Service" Description="WorkerService Service" ErrorControl="normal" Start="auto" Type="ownProcess" />
           <ServiceControl Id="sc8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" Start="install" Stop="both" Remove="both" Wait="yes" />
         </Component>
+        <Component Id="owc1DD0D3DF7587F4D58D3484B76735CC30" Guid="b03a8a59-aa5c-5fae-58d2-21a00eb1ef77">
+          <File Id="owf1DD0D3DF7587F4D58D3484B76735CC30" Source="$(var.SourceDir)\WorkerService.runtimeconfig.json" KeyPath="yes" />
+        </Component>
       </Directory>
     </Directory>
-    <ComponentGroupRef Id="Custom" />
   </Module>
 </Wix>

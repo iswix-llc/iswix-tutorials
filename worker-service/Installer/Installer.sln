@@ -1,36 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WorkerServiceMM", "WorkerServiceMM\WorkerServiceMM.wixproj", "{4941981D-3B16-404A-B20A-797CAC61CD87}"
+Project("{B7DD6F7E-DEF8-4E67-B5B7-07EF123DB6F0}") = "WorkerServiceMM", "WorkerServiceMM\WorkerServiceMM.wixproj", "{4941981D-3B16-404A-B20A-797CAC61CD87}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WorkerService", "WorkerService\WorkerService.wixproj", "{D427B230-7254-4EF3-9497-FEDC9B153C9C}"
+Project("{B7DD6F7E-DEF8-4E67-B5B7-07EF123DB6F0}") = "WorkerService", "WorkerService\WorkerService.wixproj", "{D427B230-7254-4EF3-9497-FEDC9B153C9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Installer = Debug|Installer
-		Debug|x86 = Debug|x86
-		Release|Installer = Release|Installer
-		Release|x86 = Release|x86
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Debug|Installer.ActiveCfg = Debug|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Debug|Installer.Build.0 = Debug|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Debug|x86.ActiveCfg = Debug|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Debug|x86.Build.0 = Debug|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Release|Installer.ActiveCfg = Release|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Release|Installer.Build.0 = Release|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Release|x86.ActiveCfg = Release|x86
-		{4941981D-3B16-404A-B20A-797CAC61CD87}.Release|x86.Build.0 = Release|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Debug|Installer.ActiveCfg = Debug|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Debug|Installer.Build.0 = Debug|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Debug|x86.ActiveCfg = Debug|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Debug|x86.Build.0 = Debug|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Release|Installer.ActiveCfg = Release|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Release|Installer.Build.0 = Release|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Release|x86.ActiveCfg = Release|x86
-		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Release|x86.Build.0 = Release|x86
+		{4941981D-3B16-404A-B20A-797CAC61CD87}.Debug|x64.ActiveCfg = Debug|x64
+		{4941981D-3B16-404A-B20A-797CAC61CD87}.Debug|x64.Build.0 = Debug|x64
+		{4941981D-3B16-404A-B20A-797CAC61CD87}.Release|x64.ActiveCfg = Release|x64
+		{4941981D-3B16-404A-B20A-797CAC61CD87}.Release|x64.Build.0 = Release|x64
+		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Debug|x64.ActiveCfg = Debug|x64
+		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Debug|x64.Build.0 = Debug|x64
+		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Release|x64.ActiveCfg = Release|x64
+		{D427B230-7254-4EF3-9497-FEDC9B153C9C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
