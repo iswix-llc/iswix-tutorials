@@ -7,13 +7,14 @@ These tutorials will walk you through how to build [Windows Installer](https://m
 ### These tutorials require you to download and install:
 
 * Microsoft Visual Studio
-   * 2022 or higher
+   * 2022 or higher (Sorry, we've dropped support for previous versions of Visual Studio as it's just a testing time sink.  VS2022 is awesome! )
    * [Community Edition](https://www.visualstudio.com/vs/community/) or higher. 
-* Windows Installer XML [3.11.2](http://wixtoolset.org/releases/)  or higher. 
+* Windows Installer XML [3.11.2 - 4.0.0](https://wixtoolset.org/). 
 * WiX Toolset Visual Studio Extension for v3 support and or HeatWave Visual Studio Extension for v4 support.
-   * Install one [extension](http://wixtoolset.org/releases/) for each version of Visual Studio you wish to use. 
-* IsWiX [4.11](https://github.com/iswix-llc/iswix/releases) or higher.
-   * Will automatically target all of your Visual Studio installations without the need for seperate extension downloads.
+   * Install this [extension](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension) for Visual Studio 2022 to use with WiX v3 projects.
+   * Install this [extension](https://marketplace.visualstudio.com/items?itemName=FireGiant.FireGiantHeatWaveDev17) for Visual Studio 2022 to use with WiX v4 projects.
+    
+* IsWiX [5.0.9](https://github.com/iswix-llc/iswix/releases) or higher.
 
 ## Backstory
 
@@ -27,6 +28,8 @@ IsWiX is an open source project started by Windows Installer / InstallShield / W
 
 [Desktop Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/desktop-application) A simple WPF application with a shortcut on the desktop.
 
-[Web Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/web-application) A basic ASP.NET website installed on IIS.
+[Web Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/web-application) A basic ASP.NET website installed on IIS. Implemented in .NET Framework 4.5 and WiX v3.11. (Votive)
 
-[Windows Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/windows-service) A basic Windows Service that installs and starts without using InstallUtil.
+[Windows Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/windows-service) A basic Windows Service that installs and starts without using InstallUtil. Implemented in .NET Framework 4.0 and WiX v3.11. (Votive)
+
+[Worker Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/worker-service) A basic Worker Service that installs and starts without using InstallUtil.  Implemented in .NET 7.0 and WiX v4.0. (Heatwave)
