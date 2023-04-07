@@ -1,0 +1,16 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <StandardDirectory Id="ProgramFiles6432Folder">
+      <Directory Id="CompanyFolder" Name="My Company">
+        <Directory Id="INSTALLLOCATION" Name="WebAPI">
+          <Merge Id="WebAPIMM" SourceFile="$(var.WebAPIMM.TargetPath)" DiskId="1" Language="1033"/>
+        </Directory>
+      </Directory>
+    </StandardDirectory>
+    <Feature Id="WebAPI" Title="WebAPI" Description="Installs all the files needed for WebAPI" Level="1" AllowAdvertise="no" ConfigurableDirectory="INSTALLLOCATION">
+      <MergeRef Id="WebAPIMM"/>
+      <!-- Uncomment the below line to pull in IIS Metadata.  Otherwise delete if not needed -->
+      <ComponentGroupRef Id="webSite" />
+    </Feature>
+  </Fragment>
+</Wix>

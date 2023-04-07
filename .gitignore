@@ -280,6 +280,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-/desktop-application/Installer/Deploy
-/web-application/Installer/Deploy
-/windows-service/Installer/Deploy
+**/Installer/Deploy
