@@ -24,12 +24,10 @@ WiX is an open source project started by former Microsoft employee Rob Mensching
 
 IsWiX is an open source project started by Windows Installer / InstallShield / WiX expert [Christopher Painter](http://iswix.com/) while he was working at Textron - Overwatch Systems division in [2010](http://blog.deploymentengineering.com/2010/05/introducing-iswix.html).  The project was initially funded by Textron OWS as part of a business process transformation effort. Although Textron OWS always wanted to publish the project as open source, the sensitive nature of our business made that difficult. After a very successful pilot, the IP rights were reassigned to Christopher Painter so that he could share it with the world.  InstallShield was overall a good product but Textron OWS had strained it way beyond what InstallShield was ever designed to do.  InstallShield's binary or DTD base XML project files were not branch/merge friendly and the licensing model did not encourage agile/lean workflows. WiX could solve these problems except that Textron OWS's team of 12 build and release engineers would have had to train 250+ developers how to develop in it.  IsWiX was born to give developers an InstallShield like experience for the core installer changes they would need to make.  Basically think 'minimum viable product'.  All other changes would be done by MSI experts in WiX by hand.  Later the product was expanded to include Visual Studio template to simplify the development of  desktop applications, windows services and web applications.    
 
-## Tutorials
+## Tutorials and Samples
 
-[Desktop Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v3-Votive/desktop-application) A simple WPF application with a shortcut on the desktop. Implemented in .NET Framework 4.0 and WiX v3.11. (Votive)
 
-[Web Application](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v3-Votive/web-application) A basic ASP.NET website installed on IIS. Implemented in .NET Framework 4.5 and WiX v3.11. (Votive)
+[WiX v3.11.2 / Votive](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v3-Votive) Classic Samples implemented in .NET Framework 4.x and WiX v3.11.2. (Votive)
 
-[Windows Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v3-Votive/windows-service) A basic Windows Service that installs and starts without using InstallUtil. Implemented in .NET Framework 4.0 and WiX v3.11. (Votive)
+[WiX v4.0.0 / HeatWave](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v4-HeatWave) Modern Samples implemented in .NET 7 and WiX 4.0. (HeatWave)
 
-[Worker Service](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v4-HeatWave/worker-service) A basic Worker Service that installs and starts without using InstallUtil.  Implemented in .NET 7.0 and WiX v4.0. (Heatwave)
