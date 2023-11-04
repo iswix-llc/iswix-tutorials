@@ -9,10 +9,10 @@ These tutorials will walk you through how to build [Windows Installer](https://m
 * Microsoft Visual Studio
    * 2022 (Sorry, we've dropped support for previous versions of Visual Studio as it's just a testing time sink. VS2022 is awesome! )
    * [Community Edition](https://www.visualstudio.com/vs/community/) or higher. 
-* Windows Installer XML [3.11.2 - 4.0.0](https://wixtoolset.org/). 
+* Windows Installer XML [3.11.2 - 4.0.2](https://wixtoolset.org/). 
 * WiX Toolset Visual Studio Extension for v3 support and or HeatWave Visual Studio Extension for v4 support.
    * Install [WiX ToolSet Votive](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension) extension for Visual Studio 2022 to use with WiX v3 projects.
-   * Install this [FireGiant HeatWave](https://marketplace.visualstudio.com/items?itemName=FireGiant.FireGiantHeatWaveDev17) extensionfor Visual Studio 2022 to use with WiX v4 projects.
+   * Install this [FireGiant HeatWave](https://marketplace.visualstudio.com/items?itemName=FireGiant.FireGiantHeatWaveDev17) extension for Visual Studio 2022 to use with WiX v4 projects.
     
 * IsWiX [5.0.9](https://github.com/iswix-llc/iswix/releases) or higher.
 
