@@ -6,7 +6,28 @@
   <Fragment>
     <ComponentGroup Id="WorkerServiceFiles">
       <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\appsettings.Development.json" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\appsettings.json" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\clretwrc.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\clrgc.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\clrjit.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\coreclr.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
         <File Source="$(var.SourceDir)\createdump.exe" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\hostfxr.dll" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION">
         <File Source="$(var.SourceDir)\hostpolicy.dll" KeyPath="yes" />
@@ -117,6 +138,12 @@
         <File Source="$(var.SourceDir)\mscorlib.dll" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\mscorrc.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\msquic.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
         <File Source="$(var.SourceDir)\netstandard.dll" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION">
@@ -211,6 +238,9 @@
       </Component>
       <Component Directory="INSTALLLOCATION">
         <File Source="$(var.SourceDir)\System.Diagnostics.Tracing.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\System.dll" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION">
         <File Source="$(var.SourceDir)\System.Drawing.dll" KeyPath="yes" />
@@ -618,6 +648,9 @@
         <File Source="$(var.SourceDir)\WorkerService.exe" KeyPath="yes" />
         <ServiceInstall Id="si8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" DisplayName="WorkerService Service" Description="WorkerService Service" ErrorControl="normal" Start="auto" Type="ownProcess" />
         <ServiceControl Id="sc8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" Start="install" Stop="both" Remove="both" Wait="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\WorkerService.pdb" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION">
         <File Source="$(var.SourceDir)\WorkerService.runtimeconfig.json" KeyPath="yes" />
