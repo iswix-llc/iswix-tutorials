@@ -50,4 +50,18 @@ Create a GitHub repos using the tool of your choice. Create or use a .gitignore 
 
 ## Create the Installer
 
-TODO: Work In Progress
+![Published Files](/Images/web-api/installer1.png)
+
+![Published Files](/Images/web-api/installer2.png)
+
+![Published Files](/Images/web-api/installer3.png)
+
+![Published Files](/Images/web-api/installer4.png)
+
+![Published Files](/Images/web-api/installer5.png)
+
+![Published Files](/Images/web-api/installer6.png)
+
+![Published Files](/Images/web-api/installer7.png)
+
+![Published Files](/Images/web-api/installer8.png)
