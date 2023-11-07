@@ -15,13 +15,7 @@
         <File Source="$(var.SourceDir)\WebSite\Api.exe" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
-        <File Source="$(var.SourceDir)\WebSite\Api.pdb" KeyPath="yes" />
-      </Component>
-      <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
         <File Source="$(var.SourceDir)\WebSite\Api.runtimeconfig.json" KeyPath="yes" />
-      </Component>
-      <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
-        <File Source="$(var.SourceDir)\WebSite\appsettings.Development.json" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
         <File Source="$(var.SourceDir)\WebSite\appsettings.json" KeyPath="yes" />

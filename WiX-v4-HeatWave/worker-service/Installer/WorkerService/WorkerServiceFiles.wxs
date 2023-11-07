@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <?define ComponentRules="OneToOne"?>
+  <!-- SourceDir instructs IsWiX the location of the directory that contains files for this wix library -->
+  <?define SourceDir="..\Deploy"?>
+  <Fragment>
+    <ComponentGroup Id="WorkerServiceFiles">
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\appsettings.json" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.Binder.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.CommandLine.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.FileExtensions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.Json.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Configuration.UserSecrets.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.DependencyInjection.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.FileProviders.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.FileProviders.Physical.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.FileSystemGlobbing.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Hosting.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Hosting.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Hosting.WindowsServices.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Abstractions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Configuration.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Console.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.Debug.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.EventLog.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Logging.EventSource.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Options.ConfigurationExtensions.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Options.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\Microsoft.Extensions.Primitives.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\System.Diagnostics.EventLog.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\System.ServiceProcess.ServiceController.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\WorkerService.deps.json" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\WorkerService.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\WorkerService.exe" KeyPath="yes" />
+        <ServiceInstall Id="si8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" DisplayName="WorkerService Service" Description="WorkerService Service" ErrorControl="normal" Start="auto" Type="ownProcess" />
+        <ServiceControl Id="sc8ED8217F292F3A08134092BF2BC61BBD" Name="WorkerService" Start="install" Stop="both" Remove="both" Wait="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION">
+        <File Source="$(var.SourceDir)\WorkerService.runtimeconfig.json" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
