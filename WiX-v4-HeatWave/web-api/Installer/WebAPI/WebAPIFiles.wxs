@@ -456,6 +456,9 @@
         <File Source="$(var.SourceDir)\WebSite\Microsoft.Win32.Registry.dll" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
+        <File Source="$(var.SourceDir)\WebSite\mscordaccore_amd64_amd64_7.0.1123.42427.dll" KeyPath="yes" />
+      </Component>
+      <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
         <File Source="$(var.SourceDir)\WebSite\mscordaccore.dll" KeyPath="yes" />
       </Component>
       <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
@@ -988,9 +991,6 @@
       </Component>
       <Component Directory="INSTALLLOCATION" Subdirectory="WebSite">
         <File Source="$(var.SourceDir)\WebSite\WindowsBase.dll" KeyPath="yes" />
-      </Component>
-      <Component Directory="INSTALLLOCATION" Subdirectory="WebSite\wwwroot">
-        <File Source="$(var.SourceDir)\WebSite\wwwroot\index.html" KeyPath="yes" />
       </Component>
     </ComponentGroup>
   </Fragment>
