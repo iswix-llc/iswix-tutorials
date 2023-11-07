@@ -35,12 +35,18 @@ Create a GitHub repos using the tool of your choice. Create or use a .gitignore 
 
 ![Publish Created](/Images/web-api/apppublish4.png)
 * Visual Studio will inform you that a publish profile was created. You will use this with `dotnet publish` in your CI/CD pipeline. For now just click Close.
+* Pro Tip: The publish profile is probably excluded from Git by your .gitignore.  Go ahead and manually add it to your commit or you may have issues in your CI/CD pipeline.
 
 ![Publish Settings](/Images/web-api/apppublish5.png)
 * Set the target framework to .NET 7.0.
 * Set the deployment model to Self-Contained. This will include a private copy of ASP.NET core with your application.  You will still need to install the IIS Hosting Bundle though.
 * Set the target runtime to win-x64.
-* Click publish your application.  This will help us create a directory structure that models what your deployed application should look like. Go ahead and take a look at that directory in your workspace.
+* Click publish your application.  This will help us create a directory structure that models what your deployed application should look like. 
+
+![Published Files](/Images/web-api/apppublish6.png)
+
+* Go ahead and take a look at that directory in your workspace.  These are the files that will be available to your installer.  
+* Pro Tip:  You probably don't want to commit these files to Git so go ahead and add `/Installer/Deploy` to your .gitignore.
 
 ## Create the Installer
 
