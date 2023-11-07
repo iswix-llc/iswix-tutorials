@@ -1,6 +1,5 @@
-﻿<Project Sdk="WixToolset.Sdk/4.0.0">
+﻿<Project Sdk="WixToolset.Sdk/4.0.2">
  <PropertyGroup>
-    <ProductVersion>3.7</ProductVersion>
     <!-- If MSIProductVersion not passed in, try to get it from TFBuild Environments (XAML Builds)-->
     <MSIProductVersion Condition=" '$(MSIProductVersion)' == '' ">$([System.Text.RegularExpressions.Regex]::Match($(TF_BUILD_BUILDNUMBER), "\d+.\d+.\d+.\d+"))</MSIProductVersion>
     <!-- If MSIProductVersion still not known, try to get it from TFBuild Environments (V.Next Builds)-->
@@ -12,6 +11,8 @@
     <AppxTimestampUrl Condition=" '$(AppxTimestampUrl)' == '' "></AppxTimestampUrl>
     <MsixCertificateThumbprint Condition=" '$(MsixCertificateThumbprint)' == '' "></MsixCertificateThumbprint>
     <MsixTimestampUrl Condition=" '$(MsixTimestampUrl)' == '' "></MsixTimestampUrl>
+    <OutputName>WebAPI-$(MSIProductVersion)</OutputName>
+    <OutputType>Package</OutputType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DefineConstants>Debug;MSIProductVersion=$(MSIProductVersion)</DefineConstants>
@@ -36,11 +37,8 @@
     <Content Include="Resources\EULA.rtf" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebAPIMM\WebAPIMM.wixproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="WixToolset.Iis.wixext" Version="4.0.0" />
-    <PackageReference Include="WixToolset.UI.wixext" Version="4.0.0" />
-    <PackageReference Include="WixToolset.NetFx.wixext" Version="4.0.0" />
+    <PackageReference Include="WixToolset.Iis.wixext" Version="4.0.2" />
+    <PackageReference Include="WixToolset.UI.wixext" Version="4.0.2" />
+    <PackageReference Include="WixToolset.NetFx.wixext" Version="4.0.2" />
   </ItemGroup>
 </Project>
