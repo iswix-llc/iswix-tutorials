@@ -25,22 +25,22 @@ Create a GitHub repos using the tool of your choice. Create or use a .gitignore 
 * Click Create.
 
 ![Publish](/Images/web-api/apppublish1.png)
-*Using the Solution Explorer, right click your Api project and select the publish option.
+* Using the Solution Explorer, right click your Api project and select the publish option.
 
 ![Publish Type](/Images/web-api/apppublish2.png)
-*Choose the Folder target publish type and click Next.
+* Choose the Folder target publish type and click Next.
 
 ![Publish Location](/Images/web-api/apppublish3.png)
-*Set the folder location to `..\..\Installer\Deploy\WebSite` and click Finish again.
+* Set the folder location to `..\..\Installer\Deploy\WebSite` and click Finish again.
 
 ![Publish Created](/Images/web-api/apppublish4.png)
-*Visual Studio will inform you that a publish profile was created. You will use this with `dotnet publish` in your CI/CD pipeline. For now just click Close.
+* Visual Studio will inform you that a publish profile was created. You will use this with `dotnet publish` in your CI/CD pipeline. For now just click Close.
 
 ![Publish Settings](/Images/web-api/apppublish5.png)
-*Set the target framework to .NET 7.0.
-*Set the deployment model to Self-Contained. This will include a private copy of ASP.NET core with your application.  You will still need to install the IIS Hosting Bundle though.
-*Set the target runtime to win-x64.
-*Click publish your application.  This will help us create a directory structure that models what your deployed application should look like. Go ahead and take a look at that directory in your workspace.
+* Set the target framework to .NET 7.0.
+* Set the deployment model to Self-Contained. This will include a private copy of ASP.NET core with your application.  You will still need to install the IIS Hosting Bundle though.
+* Set the target runtime to win-x64.
+* Click publish your application.  This will help us create a directory structure that models what your deployed application should look like. Go ahead and take a look at that directory in your workspace.
 
 ## Create the Installer
 
