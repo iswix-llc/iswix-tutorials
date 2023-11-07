@@ -7,7 +7,7 @@
   The Product@Id attribute (ProductCode Property) will be a random GUID for each build.  This is to support "Major Upgrades" where each install 
   is a seamless uninstall/reinstall.
   -->
-<Package Name="WebAPI" Language="1033" Version="$(var.MSIProductVersion)" Manufacturer="WebAPI" UpgradeCode="a2d3cd7b-46c7-4584-8e30-677f2fd35955">
+<Package Name="WebAPI" Language="1033" Version="$(var.MSIProductVersion)" Manufacturer="WebAPI" UpgradeCode="5a519893-1cc2-49c3-9581-3259296bea7e">
     <MediaTemplate EmbedCab="yes" />
     <!-- Major Upgrade Rule to disallow downgrades -->
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
@@ -25,6 +25,7 @@
     </StandardDirectory>
     <Feature Id="WebAPI" Title="WebAPI" Description="Installs all the files needed for WebAPI" Level="1" AllowAdvertise="no" ConfigurableDirectory="INSTALLLOCATION">
       <ComponentGroupRef Id="WebAPIFiles"/>
+      <!-- Uncomment the below line to pull in IIS Metadata.  Otherwise delete if not needed -->
       <ComponentGroupRef Id="webSite" />
     </Feature>
   </Package>
