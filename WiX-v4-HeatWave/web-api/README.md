@@ -64,9 +64,7 @@ Create a GitHub repos using the tool of your choice. Create or use a .gitignore 
 
 ### Project Structure Overview:
 
-![Mode](/Images/web-api/installer3.png)
-
-### The IsWiX solution template created a solution with two projects based on the name:
+### The IsWiX template created a solution with one project based on the name:
 
 * Setup Project 
    * Named WebApi
