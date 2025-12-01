@@ -7,14 +7,14 @@ These tutorials will walk you through how to build [Windows Installer](https://m
 ### These tutorials require you to download and install:
 
 * Microsoft Visual Studio
-   * 2022 (Sorry, we've dropped support for previous versions of Visual Studio as it's just a testing time sink. VS2022 is awesome! )
+   * 2022 or 2026 (Sorry, we've dropped support for previous versions of Visual Studio as it's just a testing time sink. VS2022 and VS2026 are awesome! )
    * [Community Edition](https://www.visualstudio.com/vs/community/) or higher. 
-* Windows Installer XML [3.11.2 - 4.0.3](https://wixtoolset.org/). 
-* WiX Toolset Visual Studio Extension for v3 support and or HeatWave Visual Studio Extension for v4 support.
-   * Install [WiX ToolSet Votive](https://marketplace.visualstudio.com/items?itemName=WixToolset.WixToolsetVisualStudio2022Extension) extension for Visual Studio 2022 to use with WiX v3 projects.
-   * Install this [FireGiant HeatWave](https://marketplace.visualstudio.com/items?itemName=FireGiant.FireGiantHeatWaveDev17) extension for Visual Studio 2022 to use with WiX v4 projects.
+
+* FireGiant HeatWave for VS2022 (supports VS2026 also)
+   * Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=FireGiant.FireGiantHeatWaveDev17)
     
-* IsWiX [5.0.9](https://github.com/iswix-llc/iswix/releases) or higher.
+* IsWiX for Visual Studio
+   * Install from the [Visual Studio Marketplace]((https://marketplace.visualstudio.com/items?itemName=ISWIX-LLC.IsWiX)
 
 ## Backstory
 
@@ -22,12 +22,9 @@ Windows Installer is a platform service created by Microsoft in 1999. Originally
 
 WiX is an open source project started by former Microsoft employee Rob Mensching while he was still at Microsoft. The first release was back in [2004](http://robmensching.com/blog/posts/2004/4/5/windows-installer-xml-wix-toolset-has-released-as-open-source-on-sourceforge.net/). WiX is essentially an XSD based Domain Specific Langauge and related compiler chain tools that allows a developer to generate Windows Installer Databases from XML documents.  WiX is a very powerful toolset that serves as a thin abstraction of the underlying Windows Installer and emphasis a 'code-first' strategy.  This has the unfortunate drawback of a steep learning curve and hand authoring of many, many lines of XML.
 
-IsWiX is an open source project started by Windows Installer / InstallShield / WiX expert [Christopher Painter](http://iswix.com/) while he was working at Textron - Overwatch Systems division in [2010](http://blog.deploymentengineering.com/2010/05/introducing-iswix.html).  The project was initially funded by Textron OWS as part of a business process transformation effort. Although Textron OWS always wanted to publish the project as open source, the sensitive nature of our business made that difficult. After a very successful pilot, the IP rights were reassigned to Christopher Painter so that he could share it with the world.  InstallShield was overall a good product but Textron OWS had strained it way beyond what InstallShield was ever designed to do.  InstallShield's binary or DTD base XML project files were not branch/merge friendly and the licensing model did not encourage agile/lean workflows. WiX could solve these problems except that Textron OWS's team of 12 build and release engineers would have had to train 250+ developers how to develop in it.  IsWiX was born to give developers an InstallShield like experience for the core installer changes they would need to make.  Basically think 'minimum viable product'.  All other changes would be done by MSI experts in WiX by hand.  Later the product was expanded to include Visual Studio template to simplify the development of  desktop applications, windows services and web applications.    
+IsWiX is an open source project started by Windows Installer / InstallShield / WiX expert [Christopher Painter](http://iswix.com/) while he was working at Textron - Overwatch Systems division in [2010](http://blog.deploymentengineering.com/2010/05/introducing-iswix.html).  The project was initially funded by Textron OWS as part of a business process transformation effort. Although Textron OWS always wanted to publish the project as open source, the sensitive nature of our business made that difficult. After a very successful pilot, the IP rights were reassigned to Christopher Painter so that he could share it with the world.  InstallShield was overall a good product but Textron OWS had strained it way beyond what InstallShield was ever designed to do.  InstallShield's binary or DTD base XML project files were not branch/merge friendly and the licensing model did not encourage agile/lean workflows. WiX could solve these problems except that Textron OWS's team of 12 build and release engineers would have had to train 250+ developers how to develop in it.  IsWiX was born to give developers an InstallShield like experience for the core installer changes they would need to make.  Basically think 'minimum viable product'.  All other changes would be done by MSI experts in WiX by hand.  Later the product was expanded to include Visual Studio templates  to simplify the development of  desktop applications, windows services and web applications.    
 
 ## Tutorials and Samples
 
-
-[WiX v3.11.2 / Votive](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v3-Votive) Classic Samples implemented in .NET Framework 4.x and WiX v3.11.2. (Votive)
-
-[WiX v4.0.3 / HeatWave](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v4-HeatWave) Modern Samples implemented in .NET 7 and WiX 4.0.3 (HeatWave)
+[WiX v6.0.2 / HeatWave](https://github.com/iswix-llc/iswix-tutorials/tree/master/WiX-v6-HeatWave) Modern Samples implemented in .NET 10 and WiX 6.0.2 (HeatWave)
 
