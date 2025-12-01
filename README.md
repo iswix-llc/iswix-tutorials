@@ -17,7 +17,7 @@ These tutorials will walk you through how to build [Windows Installer](https://m
 
 * IsWiX for Visual Studio
 
-  * Install from the \[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ISWIX-LLC.IsWiX)
+  * Install from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ISWIX-LLC.IsWiX)
 
 ## Backstory
 
