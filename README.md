@@ -1,6 +1,6 @@
 # IsWiX Tutorials Overview
 
-These tutorials will walk you through how to build [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup packages using the [WiX Toolset](http://wixtoolset.org/) (aka Windows Installer XML aka WiX) and [Industrial Strength Windows Installer XML](http://iswix.com/projects/) (aka IsWiX) for a variety of application types.
+These tutorials will walk you through how to build [Windows Installer](https://msdn.microsoft.com/en-us/library/windows/desktop/cc185688(v=vs.85).aspx) (aka .MSI) setup packages using the [WiX Toolset](http://wixtoolset.org/) (aka Windows Installer XML aka WiX) and [Industrial Strength Windows Installer XML](https://github.com/iswix-llc/iswix) (aka IsWiX) for a variety of application types.
 
 ## Prerequisites
 
